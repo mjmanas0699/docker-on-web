@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <form method="POST">
+        {# This hidden_tag is a CSRF security feature. #}
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name() }} <br>
+        {{ form.email.label }} 	&nbsp;{{ form.email() }} <br>
+        {{ form.mobile.label }}	&nbsp; {{ form.mobile(maxlength=10)}}
+        {{ form.submit() }}
+    </form>
+    <!-- <iframe width="727" height="409" src="https://192.168.43.40:4201/" frameborder="0"  allowfullscreen></iframe> -->
+</body>
+</html>
+{% endblock%}
+
+
